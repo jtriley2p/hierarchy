@@ -47,7 +47,7 @@ Unauthorized accounts (default) have the `0` authority.
 
 We can create chains of authority in this way:
 
-```solidity
+```mermaid
 flowchart BT
     U("UNCLEARED")
     C("CONFIDENTIAL")
