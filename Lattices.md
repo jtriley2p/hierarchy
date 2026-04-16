@@ -97,7 +97,7 @@ flowchart BT
 
 #### Chain Lattices
 
-Lattices defined by number comparision use the $\leq$ operator (proper) as its choice for ranking.
+Lattices defined by number comparison use the $\leq$ operator (proper) as its choice for ranking.
 We refer to these as chain lattices.
 
 We'll use a small subset of the integers $\{ 0, 1, 2, 3 \}$ for intuition, but this behaves the same
@@ -135,15 +135,15 @@ inclusion implies authority.
 
 $$P(L) = \{ \{ a\}, \{ b \}, \{ c \}, \{ a, b \}, \{ a, c \}, \{ b, c \}, \{ a, b, c \} \}$$
 
-For any two subsets $A, B \subseteq L$, we define an element which is directly above them,
+For any two subsets $A, B \subseteq L$, we define a subset which is directly above them,
 $C \subseteq L$.
 
 Concretely, we may define $A = \{ a \}$ and $B = \{ b \}$ such that $C = \{ a, b \}$.
 
 $$\{ a \}, \{ b \}, \{ a, b \} \subseteq L:$$
 $$\{ a \} \lor \{ b \} = \{ a, b \}$$
-$$\{ a \} \leq \{ a, b \}$$
-$$\{ b \} \leq \{ a, b \}$$
+$$\{ a \} \subseteq \{ a, b \}$$
+$$\{ b \} \subseteq \{ a, b \}$$
 
 ```mermaid
 flowchart BT
@@ -163,15 +163,15 @@ Concretely, we may define $A = \{ a \}$ and $B = \{ b \}$ such that $C = \varnot
 
 $$\{ a \}, \{ b \}, \varnothing \subseteq L:$$
 $$\{ a \} \land \{ b \} = \varnothing$$
-$$\varnothing \leq \{ a \}$$
-$$\varnothing \leq \{ b \}$$
+$$\varnothing \subseteq \{ a \}$$
+$$\varnothing \subseteq \{ b \}$$
 
 
 ```mermaid
 flowchart BT
-    A(a)
-    B(b)
-    C(c)
+    A("{ a }")
+    B("{ b }")
+    C("∅")
 
     C --> A
     C --> B
